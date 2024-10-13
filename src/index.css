@@ -19,24 +19,45 @@ body {
 }
 
 .text-xl {
-  font-size: 80px;
+  font-size: 96px;
   line-height: 1;
-  font-weight: 900;
   margin: 0;
 }
 
 .text-lg {
-  font-size: 28px;
+  font-size: 32px;
   line-height: 1;
-  font-weight: 400;
+  margin: 0;
+}
+
+.text-md {
+  font-size: 24px;
+  line-height: 1;
   margin: 0;
 }
 
 .text-base {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
   margin: 0;
+}
+
+.text-sm {
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.font-heavy {
+  font-weight: 900;
 }
 
 ul,

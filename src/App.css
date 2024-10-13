@@ -1,19 +1,31 @@
+/* Global */
 .header {
   padding: 16px 0;
   background-color: var(--color-orange);
   color: var(--color-cream);
-  position: fixed;
-  width: 100%;
-}
-
-.intro {
-  padding: 256px 0;
-  background-color: var(--color-orange);
-  color: var(--color-cream);
-  text-align: center;
 }
 
 .content {
   max-width: 1024px;
   margin: 0 auto;
+}
+
+/* Intro */
+.intro {
+  padding: 128px 0;
+  background-color: var(--color-orange);
+  color: var(--color-cream);
+  text-align: center;
+}
+
+/* Tips */
+.tips {
+  padding: 64px 0;
+  background-color: var(--color-orange);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
 }

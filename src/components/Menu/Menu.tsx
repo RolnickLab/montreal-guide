@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import styles from './Menu.module.css'
 
-const MENU_ITEMS = [{ label: 'Home' }, { label: 'Submit' }, { label: 'About' }]
+const MENU_ITEMS = [{ label: 'Home' }, { label: 'Submit' }]
 
 export const Menu = () => {
   return (
@@ -10,7 +10,7 @@ export const Menu = () => {
         {MENU_ITEMS.map((menuItem, index) => (
           <li
             key={index}
-            className={classNames(styles.menuItem, {
+            className={classNames('text-base font-bold', styles.menuItem, {
               [styles.active]: index === 0,
             })}
           >

@@ -1,0 +1,4 @@
+export const SUPABASE_URL = 'https://uorwfwmspoyomtehephm.supabase.co'
+
+export const SUPABASE_PUBLIC_KEY =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVvcndmd21zcG95b210ZWhlcGhtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjg4MjczNDAsImV4cCI6MjA0NDQwMzM0MH0.fj-lf7gPG13vah-BTgPKwMVmzL9Fpyjfrzu8yxaUuT4'
