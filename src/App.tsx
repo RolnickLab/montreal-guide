@@ -1,33 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Menu } from './components/Menu/Menu'
+import { Spacer } from './components/Spacer/Spacer'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header className="header">
+        <div className="content">
+          <Menu />
+        </div>
+      </header>
+      <main>
+        <div className="intro">
+          <div className="content">
+            <h1 className="text-xl">Bienvenue!</h1>
+            <Spacer size={32} />
+            <h2 className="text-lg">The Rolnick Lab Guide to Montréal</h2>
+          </div>
+        </div>
+      </main>
     </>
   )
 }
