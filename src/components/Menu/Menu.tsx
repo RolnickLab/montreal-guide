@@ -1,20 +1,28 @@
 import classNames from 'classnames'
 import styles from './Menu.module.css'
+import { NavLink } from 'react-router-dom'
 
-const MENU_ITEMS = [{ label: 'Home' }, { label: 'Submit' }]
+const MENU_ITEMS = [
+  { label: 'Home', to: '/' },
+  { label: 'Submit', to: '/submit' },
+]
 
 export const Menu = () => {
   return (
     <nav>
       <ul className={styles.menuItems}>
         {MENU_ITEMS.map((menuItem, index) => (
-          <li
-            key={index}
-            className={classNames('text-base font-bold', styles.menuItem, {
-              [styles.active]: index === 0,
-            })}
-          >
-            {menuItem.label}
+          <li key={index}>
+            <NavLink
+              className={({ isActive }) =>
+                classNames('text-base font-bold', styles.menuItem, {
+                  [styles.active]: isActive,
+                })
+              }
+              to={menuItem.to}
+            >
+              {menuItem.label}
+            </NavLink>
           </li>
         ))}
       </ul>

@@ -1,8 +1,9 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-cream);
   border-radius: 16px;
+  background-color: var(--color-cream);
+  color: var(--color-black);
   overflow: hidden;
 }
 
@@ -68,8 +69,4 @@
   justify-content: center;
   gap: 4px;
   color: var(--color-green);
-  text-decoration: none;
-}
-.link:hover {
-  opacity: 0.8;
 }
