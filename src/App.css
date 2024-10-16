@@ -5,13 +5,13 @@
 
 .content {
   max-width: 1024px;
+  padding: 0 32px;
   margin: 0 auto;
 }
 
 /* Intro */
 .intro {
   padding: 128px 0;
-
   text-align: center;
 }
 
@@ -24,4 +24,25 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 32px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    padding: 0 16px;
+  }
+
+  .tips {
+    padding: 16px 0;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
