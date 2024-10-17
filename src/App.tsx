@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import { Card } from './components/Card/Card'
 import { Menu } from './components/Menu/Menu'
+import { Select } from './components/Select/Select'
 import { Spacer } from './components/Spacer/Spacer'
 import { useCategories, useTips } from './utils/supabase/supabase'
 
@@ -27,6 +29,21 @@ const App = () => {
 const Tips = () => {
   const { tips } = useTips()
   const { categories } = useCategories()
+  const [category, setCategory] = useState<string | undefined>(
+    'show-everything',
+  )
+
+  if (!tips || !categories) {
+    return null
+  }
+
+  const filteredTips = tips.filter((tip) => {
+    if (!category || category === 'show-everything') {
+      return true
+    }
+
+    return `${tip.category}` === category
+  })
 
   return (
     <>
@@ -37,12 +54,25 @@ const Tips = () => {
           <h2 className="text-lg font-normal">
             The Rolnick Lab Guide to Montréal
           </h2>
+          <Spacer size={64} />
+          <Select
+            items={[
+              { label: 'Show everything', value: 'show-everything' },
+              ...categories.map((category) => ({
+                label: category.label as string,
+                value: `${category.id}`,
+              })),
+            ]}
+            placeholder="Pick a category..."
+            value={category}
+            onValueChange={setCategory}
+          />
         </div>
       </div>
       <div className="tips">
         <div className="content">
           <div className="cards">
-            {tips.map((tip) => (
+            {filteredTips.map((tip) => (
               <Card key={tip.id} tip={tip} categories={categories} />
             ))}
           </div>
