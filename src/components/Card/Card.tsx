@@ -74,7 +74,7 @@ const PlaceholderImage = ({ categoryId }: { categoryId?: number }) => {
 
 const Link = ({ label, href }: { label: string; href: string }) => {
   return (
-    <a href={href} className={styles.link}>
+    <a href={href} className={classNames('font-bold', styles.link)}>
       <span>{label}</span>
       <ExternalLinkIcon />
     </a>

@@ -18,7 +18,7 @@ export const Select = ({
 }: SelectProps) => (
   <SelectPrimitive.Root value={value} onValueChange={onValueChange}>
     <SelectPrimitive.Trigger
-      className={classNames('text-base', styles.trigger)}
+      className={classNames('text-base font-bold', styles.trigger)}
     >
       <SelectPrimitive.Value placeholder={placeholder} />
       <SelectPrimitive.Icon className={styles.icon}>
@@ -31,7 +31,7 @@ export const Select = ({
           {items.map((item) => (
             <SelectPrimitive.Item
               key={item.value}
-              className={classNames('text-base', styles.item)}
+              className={classNames('text-base font-bold', styles.item)}
               value={item.value}
             >
               <SelectPrimitive.ItemText>{item.label}</SelectPrimitive.ItemText>
