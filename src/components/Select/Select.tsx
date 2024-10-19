@@ -7,12 +7,12 @@ interface SelectProps {
   items: { label: string; value: string }[]
   placeholder?: string
   value?: string
-  onValueChange: (value?: string) => void
+  onValueChange?: (value?: string) => void
 }
 
 export const Select = ({
   items,
-  placeholder,
+  placeholder = 'Pick a value...',
   value,
   onValueChange,
 }: SelectProps) => (
@@ -30,6 +30,7 @@ export const Select = ({
         <SelectPrimitive.Viewport>
           {items.map((item) => (
             <SelectPrimitive.Item
+              key={item.value}
               className={classNames('text-base', styles.item)}
               value={item.value}
             >

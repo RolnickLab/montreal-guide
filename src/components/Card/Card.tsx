@@ -35,7 +35,7 @@ export const Card = ({ tip, categories }: CardProps) => {
           <i>"{tip.description}"</i>
         </p>
         <Spacer size={32} expand />
-        <div className={classNames('text-base, font-bold', styles.links)}>
+        <div className={classNames('text-base, text-bold', styles.links)}>
           {tip.website_url && <Link label="Website" href={tip.website_url} />}
           {tip.google_maps_url && (
             <Link label="Google Maps" href={tip.google_maps_url} />

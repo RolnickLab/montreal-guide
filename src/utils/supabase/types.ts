@@ -37,15 +37,15 @@ export type Database = {
       categories: {
         Row: {
           id: number
-          label: string | null
+          label: string
         }
         Insert: {
           id?: number
-          label?: string | null
+          label?: string
         }
         Update: {
           id?: number
-          label?: string | null
+          label?: string
         }
         Relationships: []
       }

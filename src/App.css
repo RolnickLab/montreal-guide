@@ -9,15 +9,15 @@
   margin: 0 auto;
 }
 
-/* Intro */
 .intro {
+  max-width: 640px;
+  margin: 0 auto;
   padding: 128px 0;
   text-align: center;
 }
 
-/* Tips */
-.tips {
-  padding: 64px 0;
+.main {
+  padding: 0 0 64px;
 }
 
 .cards {
@@ -37,8 +37,12 @@
     padding: 0 16px;
   }
 
-  .tips {
-    padding: 16px 0;
+  .intro {
+    padding: 64px 0;
+  }
+
+  .main {
+    padding: 0 0 16px;
   }
 
   .cards {
