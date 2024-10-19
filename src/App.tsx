@@ -77,10 +77,6 @@ const Tips = () => {
 const Submit = () => {
   const { categories, isLoading } = useCategories()
 
-  if (isLoading) {
-    return null
-  }
-
   return (
     <>
       <div className="intro">
@@ -99,7 +95,7 @@ const Submit = () => {
       </div>
       <main className="main">
         <div className="content">
-          <Form categories={categories} />
+          {!isLoading && <Form categories={categories} />}
         </div>
       </main>
     </>
