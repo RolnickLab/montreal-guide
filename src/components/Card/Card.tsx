@@ -60,7 +60,14 @@ const PlaceholderImage = ({ categoryId }: { categoryId?: number }) => {
 
   return (
     <div className={styles.placeholderImageContainer}>
-      {image && <img className={styles.placeholderImage} src={image} alt="" />}
+      {image && (
+        <img
+          className={styles.placeholderImage}
+          src={image}
+          alt=""
+          loading="lazy"
+        />
+      )}
     </div>
   )
 }
